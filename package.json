@@ -1,13 +1,13 @@
 {
   "name": "kindlegen",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple Node.js wrapper of the official kindlegen program",
   "main": "index.js",
   "scripts": {
-    "install": "node install.js",
     "test": "mocha"
   },
   "files": [
+    "binaries",
     "*.js"
   ],
   "repository": {

@@ -23,7 +23,7 @@ module.exports = (inputPath, outputPath, options) => {
       }
 
       const kindlegen = spawn(
-        path.resolve(__dirname, 'bin/kindlegen'),
+        binaryPath(),
         args,
         {
           cwd: tempDir,
@@ -53,4 +53,17 @@ module.exports = (inputPath, outputPath, options) => {
       reject(error);
     }
   });
+}
+
+function binaryPath() {
+  switch (process.platform) {
+    case 'darwin':
+      return path.resolve(__dirname, 'binaries/kindlegen-macos-x64');
+    case 'linux':
+      return path.resolve(__dirname, 'binaries/kindlegen-linux-x86');
+    case 'win32':
+      return path.resolve(__dirname, 'binaries/kindlegen-win-x64');
+    default:
+      throw new Error('Unsupported platform: ' + process.platform);
+  }
 }

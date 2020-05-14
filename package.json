@@ -1,6 +1,6 @@
 {
-  "name": "kindlegen",
-  "version": "0.2.0",
+  "name": "@reedsy/kindlegen",
+  "version": "0.2.0-reedsy.1.0.0",
   "description": "Simple Node.js wrapper of the official kindlegen program",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hakatashi/kindlegen.git"
+    "url": "git//github.com/reedsy/kindlegen.git"
   },
   "keywords": [
     "epub",
